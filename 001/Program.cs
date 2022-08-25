@@ -40,7 +40,7 @@ int SumEven(int[] array)
     }
     return value;
 }
-int length = Prompt("Введите размер массива");
+int length = Prompt("Введите размер массива ");
 int[] array = CreateArray(length);
 PrintArray(array);
 int count = SumEven(array);
