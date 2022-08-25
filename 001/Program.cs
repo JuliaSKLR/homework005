@@ -21,7 +21,13 @@ void PrintArray(int[] array)
     }
     System.Console.WriteLine();
 }
-
+int Prompt(string message)
+{
+    System.Console.Write(message);
+    string readValue = Console.ReadLine();
+    int result = int.Parse(readValue);
+    return result;
+}
 int SumEven(int[] array)
 {
     int value = 0;
@@ -34,8 +40,8 @@ int SumEven(int[] array)
     }
     return value;
 }
-
-int[] array = CreateArray(7);
+int length = Prompt("Введите размер массива");
+int[] array = CreateArray(length);
 PrintArray(array);
 int count = SumEven(array);
 System.Console.WriteLine($"Колличество четных элементов = {count}");
